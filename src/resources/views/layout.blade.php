@@ -25,9 +25,23 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/">Sākumlapa</a>
                     </li>
+
+                @if(Auth::check())
                     <li class="nav-item">
                         <a class="nav-link" href="/authors">Autori</a>
                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">Autori</a>
+                    </li>
+
+                @else
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Pieslēgties</a>
+                    </li>
+
+                @endif
+                
                 </ul>
             </div>
         </div>
