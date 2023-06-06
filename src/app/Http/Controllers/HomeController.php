@@ -10,7 +10,7 @@ class HomeController extends Controller
     {
         return view(
             'public',
-            ['title' => 'Everita']
+            ['title' => 's22vecbever']
         );
     }
 }

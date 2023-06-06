@@ -28,7 +28,7 @@
 
         <footer class="mt-5 py-5">
             <div class="container">
-                K. Immers, VeA, 2023
+                Everita Vecbērza, VeA, 2023
             </div>
         </footer>
         <script src="{{ asset('/js/app.js') }}"></script>

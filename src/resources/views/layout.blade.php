@@ -67,7 +67,7 @@
         <div class="container">
             <div class="row py-5">
                 <div class="col">
-                    Everita Vecbērza, 2023
+                Everita Vecbērza, VeA, 2023
                 </div>
             </div>
         </div>

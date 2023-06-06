@@ -274,7 +274,7 @@ function renderRelated(books) {
         // create card link
         let btn = document.createElement('a');
         btn.classList = 'btn btn-success see-more';
-        btn.textContent = 'Apskatؤ«t';
+        btn.textContent = 'Apskatīt';
         btn.href = '#';
         btn.dataset.bookId = book.id;
         cardBody.appendChild(btn);
