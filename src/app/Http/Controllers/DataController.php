@@ -37,6 +37,4 @@ class DataController extends Controller
              ->get();
 
      }
-
-
 }
