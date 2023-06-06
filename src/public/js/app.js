@@ -142,6 +142,11 @@ function renderSingle(book) {
         title.textContent = book.name;
         info.appendChild(title);
 
+        // autors
+        let author = document.createElement('h5');
+        author.textContent = 'by ' + book.author;
+        info.appendChild(author);
+
         // full description
         if (book.description.length > 0) {
             let lead = document.createElement('p');
@@ -154,6 +159,7 @@ function renderSingle(book) {
         let dl = document.createElement('dl');
         dl.classList = 'row';
 
+           
             // year
             let yearLabel = document.createElement('dt');
             yearLabel.classList = 'col-sm-3';
@@ -164,6 +170,20 @@ function renderSingle(book) {
             yearValue.classList = 'col-sm-9';
             yearValue.textContent = book.year;
             dl.appendChild(yearValue);
+            
+
+            // genre
+            if (book.genre.length > 0) {
+                let genreLabel = document.createElement('dt');
+                genreLabel.classList = 'col-sm-3';
+                genreLabel.textContent = 'Žanrs';
+                dl.appendChild(genreLabel);
+
+                let genreValue = document.createElement('dd');
+                genreValue.classList = 'col-sm-9';
+                genreValue.textContent = book.genre;
+                dl.appendChild(genreValue);
+            }
 
             // price
             let priceLabel = document.createElement('dt');
@@ -175,19 +195,7 @@ function renderSingle(book) {
             priceValue.classList = 'col-sm-9';
             priceValue.innerHTML = "&euro; " + book.price;
             dl.appendChild(priceValue);
-
-            // genre
-            if (book.genre.length > 0) {
-                let genreLabel = document.createElement('dt');
-                genreLabel.classList = 'col-sm-3';
-                genreLabel.textContent = 'إ½anrs';
-                dl.appendChild(genreLabel);
-
-                let genreValue = document.createElement('dd');
-                genreValue.classList = 'col-sm-9';
-                genreValue.textContent = book.genre;
-                dl.appendChild(genreValue);
-            }
+            
 
         info.appendChild(dl);
 
