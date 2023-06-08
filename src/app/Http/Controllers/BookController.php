@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Book;
 use App\Models\Author;
+use App\Models\Genre;
 use App\Http\Requests\BookRequest;
 
 
@@ -33,12 +34,16 @@ class BookController extends Controller
     {
 
         $authors = Author::orderBy('name', 'asc')->get();
+        $genres = Genre::orderBy('name', 'asc')->get();
+
         return view(
             'book.form',
             [
                 'title' => 'Pievienot grāmatu',
                 'book' => new Book(),
                 'authors' => $authors,
+                'genres' => $genres
+
             ]
         );
     }
@@ -48,6 +53,7 @@ class BookController extends Controller
         $validatedData = $request->validate([
             'name' => 'required|min:3|max:256',
             'author_id' => 'required',
+            'genre_id' => 'required',
             'description' => 'nullable',
             'price' => 'nullable|numeric',
             'year' => 'numeric',
@@ -56,6 +62,7 @@ class BookController extends Controller
         ]);
         $book->name = $validatedData['name'];
         $book->author_id = $validatedData['author_id'];
+        $book->genre_id = $validatedData['genre_id'];
         $book->description = $validatedData['description'];
         $book->price = $validatedData['price'];
         $book->year = $validatedData['year'];
@@ -85,12 +92,16 @@ class BookController extends Controller
     public function update(Book $book)
     {
         $authors = Author::orderBy('name', 'asc')->get();
+        $genres = Genre::orderBy('name', 'asc')->get();
+
         return view(
             'book.form',
             [
                 'title' => 'Rediģēt grāmatu',
                 'book' => $book,
                 'authors' => $authors,
+                'genres' => $genres,
+
             ]
         );
     }

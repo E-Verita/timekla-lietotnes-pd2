@@ -9,6 +9,7 @@
                     <th>ID</th>
                     <th>Nosaukums</th>
                     <th>Autors</th>
+                    <th>Žanrs</th>
                     <th>Gads</th>
                     <th>Cena</th>
                     <th>Publicēts</th>
@@ -29,6 +30,7 @@
                         <td class="align-middle">{{ $book->id }}</td>
                         <td class="align-middle">{{ $book->name }}</td>
                         <td class="align-middle">{{ $book->author->name }}</td>
+                        <td class="align-middle">{{ $book->genre?->name }}</td>
                         <td class="align-middle">{{ $book->year }}</td>
                         <td class="align-middle">&euro; {{ number_format($book->price, 2, '.') }}</td>
                         <td class="align-middle">{!! $book->display ? '&#x2714;' : '&#x274C;' !!}</td>
