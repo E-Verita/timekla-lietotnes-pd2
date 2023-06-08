@@ -18,7 +18,7 @@
                 <td>{{ $genre->id }}</td>
                 <td>{{ $genre->name }}</td> 
                 <td>
-                <a href="/genres/update/{{$genre->id}}" class="btn btn-outline btn-small btn-dark"> Labot</a>
+                <a href="/genres/update/{{$genre->id}}" class="btn btn-outline-primary btn-sm"> Labot</a>
                 /
                 <form method="post" action="/genres/delete/{{ $genre->id }}" 
                 class="deletion-form d-inline">
@@ -35,6 +35,8 @@
         <p>Nav atrasts neviens ieraksts</p>
 
     @endif
+    <div class="text-center">
+    <a href="/genres/create" class="btn btn-primary align-center">Pievienot jaunu žanru</a>
+    </div>
 
-    <a href="/genres/create" class="btn btn-block btn-dark">Pievienot jaunu žanru</a>
 @endsection

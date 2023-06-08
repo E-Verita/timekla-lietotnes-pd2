@@ -9,7 +9,33 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+<style>
+     body {
+        background: linear-gradient(to bottom, #0D6EFD, #ABCCFE) no-repeat;
+        background-size: cover;
+    }
 
+    @media (max-width: 767px) {
+        body {
+            background: #ABCCFE;
+        }
+    }
+
+    .book-info-overlay {
+    position: relative;
+    width: 100px;
+    height: 130px;
+}
+
+.book-info-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+</style>
 </head>
 
 <body>

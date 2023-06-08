@@ -23,6 +23,9 @@ class Book extends Model
     
     public function jsonSerialize(): mixed
     {
+        $image = $this->image ? asset('images/' . $this->image) : asset('images/nocover.jpg');
+
+
         return [
             'id' => $this->id,
             'name' => $this->name,
@@ -31,7 +34,7 @@ class Book extends Model
             'genre' => ($this->genre ? $this->genre->name : ""),
             'price' => floatval(number_format($this->price, 2)),
             'year' => $this->year,
-            'image' => asset('images/' . $this->image),
+            'image' => $image,
         ];
     }
 

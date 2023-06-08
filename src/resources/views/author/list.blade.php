@@ -18,7 +18,7 @@
                 <td>{{ $author->id }}</td>
                 <td>{{ $author->name }}</td> 
                 <td>
-                <a href="/authors/update/{{$author->id}}" class="btn btn-outline btn-small btn-dark"> Labot</a>
+                <a href="/authors/update/{{$author->id}}" class="btn btn-outline-primary btn-sm"> Labot</a>
                 /
                 <form method="post" action="/authors/delete/{{ $author->id }}" 
                 class="deletion-form d-inline">
@@ -35,6 +35,8 @@
         <p>Nav atrasts neviens ieraksts</p>
 
     @endif
+    <div class="text-center">
+    <a href="/authors/create" class="btn btn-primary align-center">Pievienot jaunu autoru</a>
+</div>
 
-    <a href="/authors/create" class="btn btn-block btn-dark">Pievienot jaunu autoru</a>
 @endsection
